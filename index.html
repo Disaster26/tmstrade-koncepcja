@@ -76,7 +76,7 @@ p{margin:0}
 .panelm{position:fixed;inset:var(--hh) 0 0 0;z-index:49;background:#fff;padding:18px 4vw 30px;display:flex;flex-direction:column;gap:2px;overflow:auto}
 .panelm[hidden]{display:none}
 .panelm a{display:block;padding:13px 2px;border-bottom:1px solid var(--li);text-decoration:none;font-weight:700;font-style:italic;font-stretch:112%;font-size:21px}
-.panelm .btn{margin-top:22px;align-self:flex-start}
+.panelm a.btn{display:inline-flex;margin-top:22px;align-self:flex-start;padding:0 26px;border:0;font-size:17px;font-style:normal}
 .panelm p{margin-top:18px;color:var(--mut);font-size:15px;line-height:1.55}
 
 /* pierwszy ekran: ściana sklepowa */
@@ -91,9 +91,9 @@ p{margin:0}
 .hero .info{font-size:15px;color:#AEB3BA}
 .hero .info b{color:#fff;font-weight:700}
 @media (min-width:900px){
- .hero-panel{width:calc(max(4vw,(100vw - var(--w))/2) + min(700px,40vw) + 150px);padding:60px 150px 60px max(4vw,calc((100vw - var(--w))/2))}
+ .hero-panel{--sl:calc(.22 * (100svh - var(--hh)));width:calc(max(4vw,(100vw - var(--w))/2) + min(700px,40vw) + 60px + var(--sl));padding:60px calc(60px + var(--sl)) 60px max(4vw,calc((100vw - var(--w))/2))}
  .hero-panel::before{inset:0 0 0 -40%;transform:skewX(var(--sk))}
- .hero-sciana{top:5%;bottom:5%;right:max(3vw,calc((100vw - var(--w))/2 - 2vw));left:calc(max(4vw,(100vw - var(--w))/2) + min(700px,40vw) + 60px)}
+ .hero-sciana{top:5%;bottom:5%;right:max(3vw,calc((100vw - var(--w))/2 - 8vw));left:calc(max(4vw,(100vw - var(--w))/2) + min(700px,40vw) + 40px + .12 * (100svh - var(--hh)))}
 }
 @media (min-width:900px) and (max-height:760px){.hero h1{font-size:clamp(36px,3.2vw,56px)}.hero .lead{margin-top:16px}.hero .akcja{margin-top:24px}}
 @media (max-width:899px){
